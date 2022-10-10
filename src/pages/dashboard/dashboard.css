@@ -1,0 +1,18 @@
+.home-dashboard {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/src/assets/imgbg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center center;
+  color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.home-dashboard::-webkit-scrollbar {
+  width: 0px !important;
+}

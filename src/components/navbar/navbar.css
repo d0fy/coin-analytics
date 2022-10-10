@@ -1,0 +1,13 @@
+.navbar__styled {
+  background-color: rgba(177, 44, 255, 0.2);
+  backdrop-filter: blur(100px);
+}
+
+.btn__color {
+  background-color: #b12cff;
+}
+
+.bg__styled {
+  background-color: rgba(177, 44, 255, 0.5);
+  backdrop-filter: blur(100px);
+}
