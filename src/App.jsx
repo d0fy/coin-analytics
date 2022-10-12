@@ -17,6 +17,8 @@ import useWindowDimensions from "./utils/getDimension";
 
 // axios
 import axios from "axios";
+import Footer from "./components/footer/Footer";
+import { AuthContextProvider } from "./auth/AuthContext";
 
 function App() {
   const { width, height } = useWindowDimensions();
@@ -34,16 +36,19 @@ function App() {
 
   return (
     <div className="App sm:px-20">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Dashboard coins={coins} />} />
-        <Route path="/signin" element={<Signin />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/account" element={<Account />} />
-        <Route path="/coin/:coinId" element={<DetailCoin />}>
-          <Route path=":coinId" />
-        </Route>
-      </Routes>
+      <AuthContextProvider>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Dashboard coins={coins} />} />
+          <Route path="/signin" element={<Signin />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/coin/:coinId" element={<DetailCoin />}>
+            <Route path=":coinId" />
+          </Route>
+        </Routes>
+        <Footer />
+      </AuthContextProvider>
     </div>
   );
 }
